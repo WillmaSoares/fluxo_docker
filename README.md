@@ -5,15 +5,11 @@ Este projeto é um exemplo de configuração com Docker para um ambiente HTML es
 ## Estrutura
 
 - `index.html`: página principal
-- `style.css`: estilos
-- `Dockerfile`: configura o container
-- `.dockerignore`: ignora arquivos desnecessários
+- `style.css`: estilos da página
+- `Dockerfile`: configura o container NGINX
+- `.dockerignore`: ignora arquivos desnecessários na build
+- `prints_terminal/`: pasta com capturas de tela dos comandos executados no terminal
 
-## Como usar
-
-## 📸 Prints do Terminal Pasta
-
-`prints_terminal`.
 
 ### 1º Fluxo – PostgreSQL
 
@@ -39,9 +35,11 @@ docker logs --tail 100 nginx-html
 ```bash
 docker run --name nginx-demo -d -p 8080:80 nginx:alpine
 docker logs nginx-8080
+
 docker exec -it nginx-8080 sh
 ls /usr/share/nginx/html
 exit
+
 docker rm -f nginx-8080
 docker rmi nginx:alpine
 ```
