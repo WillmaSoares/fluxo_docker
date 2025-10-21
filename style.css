@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    justify-content: center;
+    /* horizontal */
+    align-items: center;
+    /* vertical */
+    height: 100vh;
+    /* altura da tela */
+    margin: 0;
+}
+
+h1 {
+    color: saddlebrown;
+}
